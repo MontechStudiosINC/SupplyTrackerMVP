@@ -125,7 +125,7 @@ def seed_shipments(db: Session, ports):
             status=status,
             value_usd=random.uniform(100000, 5000000),
             cargo_type=random.choice(CARGO_TYPES),
-            route_distance_nm=distance
+            route_distance_nm=float(distance)
         )
         db.add(shipment)
         shipments.append(shipment)

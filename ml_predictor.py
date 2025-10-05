@@ -154,8 +154,8 @@ class RiskPredictor:
             prediction = Prediction(
                 shipment_id=shipment.id,
                 run_id=run_id,
-                delay_probability=delay_prob,
-                predicted_delay_hours=delay_hours,
+                delay_probability=float(delay_prob),
+                predicted_delay_hours=float(delay_hours),
                 risk_level=risk_level,
                 risk_factors=", ".join(risk_factors) if risk_factors else "Normal conditions"
             )
